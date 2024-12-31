@@ -1,7 +1,17 @@
 [package]
 name = "zero2prod"
 version = "0.1.0"
+authors = ["Antonio Diaz Flores"]
 edition = "2021"
+
+# Only one library is supported per project
+[lib]
+path = "src/lib.rs"
+
+# The double brackets represents an array, multiple binaries are supported per project
+[[bin]]
+path = "src/main.rs"
+name = "zero2prod"
 
 [dependencies]
 actix-web = "4"
